@@ -25,7 +25,7 @@
                     <p>Use class binding to reference a property(isActive) in the components data object to determine
                         when to add the class to the elements class list. Then change the value of that data
                         property(isActive) to true. Notice Vue will rerender each time the value changes.</p>
-                    <div class="red">
+                    <div class="red" :class="{ active: isActive}">
                         <!-- add a class binding attribute to the p tag -->
                         <p>This text will turn green on active</p>
                     </div>
@@ -42,11 +42,11 @@
         name: "binding-exercises",
         data() {
             return {
+                message: "Super secret message here!",
                 //create a property called myName and set its value to "type your name here"
                 myName: "Type your name here",
-                message: "Super secret message here!",
                 //change isActive to true 
-                isActive: false
+                isActive: true
             }
         }
     }
